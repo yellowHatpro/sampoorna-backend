@@ -1,0 +1,1 @@
+web: ./build/install/sampoorna-backend/bin/sampoorna-backend
