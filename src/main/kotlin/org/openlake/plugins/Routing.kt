@@ -1,7 +1,9 @@
 package org.openlake.plugins
 
+import io.ktor.http.*
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
+import io.ktor.server.response.*
 import org.openlake.authenticate
 import org.openlake.data.user.UserDataSource
 import org.openlake.getSecretInfo
@@ -23,5 +25,12 @@ fun Application.configureRouting(
         signUp(hashingService,userDataSource)
         authenticate()
         getSecretInfo()
+        hello()
+    }
+}
+
+fun Route.hello(){
+    get("helloworld"){
+        call.respond(HttpStatusCode.OK,"Hello")
     }
 }
