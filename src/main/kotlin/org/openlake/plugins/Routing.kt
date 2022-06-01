@@ -30,7 +30,7 @@ fun Application.configureRouting(
 }
 
 fun Route.hello(){
-    get("helloworld"){
+    get("/"){
         call.respond(HttpStatusCode.OK,"Hello")
     }
 }
