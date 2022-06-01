@@ -1,1 +1,1 @@
-web: ./build/install/sampoorna-backend/bin/sampoorna-backend
+web: ./build/install/sampoorna-backend/bin/sampoorna-backend -Dserver.port=$PORT
